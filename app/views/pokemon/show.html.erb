@@ -1,0 +1,15 @@
+<h1><%= @name.capitalize %></h1>
+<h3>Poke Index #<%= @id %></h3>
+<% if @types.length > 1 %>
+  <h2>Types:</h2>
+<% else %>
+  <h2>Type:</h2>
+<% end %>
+  <ul>
+    <% @types.each do |type| %>
+      <li><%= type.capitalize %></li>
+    <% end %>
+  </ul>
+<div>
+  <img src="https://media.giphy.com/media/<%= @gif_id %>/giphy.gif" alt="Pokemon">
+</div>
